@@ -9,7 +9,9 @@ public class FibonacciSeries
     {
         int[] FibArr = new int[num];
 
-        FibArr[0] = 0;
+        if(num == 1)
+            return FibArr;
+
         FibArr[1] = 1;
 
         for(int i = 2; i < num; i++)
@@ -27,6 +29,6 @@ public class FibonacciSeries
         System.out.print("Enter the number of terms: ");
         int num = sc.nextInt();
 
-        System.out.println("\nThe Fibonacci series up to " + num + " terms: " + Arrays.toString(Fibonacci(num)));
+        System.out.println("\nThe Fibonacci series up to " + num + " term(s): " + Arrays.toString(Fibonacci(num)));
     }
 }
